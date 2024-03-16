@@ -1,10 +1,18 @@
-#!/usr/bin/python3
+#!/usr/bin/pythong3
+import marshal
 
-if _ _ name_ _ == "_ _main_ _":
+def print_names();
 
-    import hidden_4
+    with open('hidden_4.pyc', 'rb') as file:
+        code = marshal.load(file)
 
-    names = dir(hidden_4)
-    for name in names:
-        if name[:2] !_ "__":
-            print(name)
+        names = [name for name in code.co_names if not name.startswith('__')]
+
+        sorted_names = sorted(names)
+
+        for name in sorted_names:
+        print(name)
+
+if __name__ == "__main__":
+    print_names()
+
