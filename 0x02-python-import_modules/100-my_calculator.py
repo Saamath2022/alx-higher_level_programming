@@ -15,11 +15,11 @@ from calculator_1 import add, subtract, multiply, divide
     if operator == "+":
         print("{} + {} = {}".format(a, b, add(a, b)))
     elif operator == "-":
-        print("{} - {} = {}".format(a, b, add(a, b)))
+        print("{} - {} = {}".format(a, b, subtract(a, b)))
     elif operator == "*":
-        print("{} * {} = {}".format(a, b, add(a, b)))
+        print("{} * {} = {}".format(a, b, multiply(a, b)))
      elif operator == "/":
-        print("{} / {} = {}".format(a, b, add(a, b)))
+        print("{} / {} = {}".format(a, b, divide(a, b)))
     else:
         print("Unknown operator. Availabe operators: +, -, * and /")
         exit(1)
