@@ -6,5 +6,5 @@ if _ _ name_ _ == "_ _main_ _":
 
     names = dir(hidden_4)
     for name in names:
-        if not name.startswith("__"):
+        if name[:2] !_ "__":
             print(name)
