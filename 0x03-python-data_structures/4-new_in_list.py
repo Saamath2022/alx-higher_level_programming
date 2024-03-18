@@ -5,4 +5,4 @@ def get_element_or_copy(my_list=[], idx=0):
     elif idx < len(my_list):
         return my_list[idx]
     else:
-        return Nonei
+        return None
