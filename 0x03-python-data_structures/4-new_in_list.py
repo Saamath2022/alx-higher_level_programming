@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-def get_element_or_copy(my_list=[], idx=0):
+def new_in_list(my_list, idx, element):
     if idx < 0:
-        return my_list.copy()
-    if idx >= len(my_list):
-        return my_list.copy()
-        modified_list = my_list.copy()
-        modified_list[idx] = element
-        return modified_list
+        return my_list
+    elif idx >= len(my_list):
+        return my_list
+    new_list = list(my_list)
+    new_list[idx] = element
+    return new_list
