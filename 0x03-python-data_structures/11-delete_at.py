@@ -4,4 +4,4 @@ def delet_at(my_list=[], indx=0):
         print("{} out of range".format(indx))
     else:
         del my_list[idx]
-        print("deleted item at position", idx)
+        print(my_list)
