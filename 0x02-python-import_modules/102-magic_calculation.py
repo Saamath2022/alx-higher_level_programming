@@ -1,12 +1,13 @@
 def magic_calculation(a, b):
+    """Match bytecode provided by Holberton School."""
     from magic_calculation_102 import add, sub
 
     if a < b:
         c = add(a, b)
-        for i in range(7, 10):
+        i = 4
+        while i < 6:
             c = add(c, i)
-            return c
-        else:
-            return sub(a, b)
-        return 0
-
+            i += 1
+        return c
+    else:
+        return sub(a, b)
