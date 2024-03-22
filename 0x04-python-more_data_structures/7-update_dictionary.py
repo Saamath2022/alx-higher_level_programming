@@ -24,13 +24,3 @@ update_dictionary(dictionary4, 'language', 'Python')
 update_dictionary(dictionary4, 'number', 89)
 update_dictionary(dictionary4, 'track', 'Low level')
 print_dictionary(dictionary4i)
-
-
-def print_dictionar(a_dictionary):
-    for key, value in a_dictionary.items():
-        print(f"{key}: {value}")
-        print("--")
-
-
-if __name__ == "__main__":
-    test_function()
