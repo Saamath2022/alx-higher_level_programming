@@ -1,13 +1,18 @@
 #!/usr/bin/python3
 
 def safe_print_list_integers(my_list=[], x=0):
-    t, i = 0, 0
-    while t < x:
+    try:
+        t = 0
+    for item in my_list[:x]:
         try:
-            print("(:d)".format(my_list[t]), end='')
-            i += 1
-        except (ValueError, TypeError):
+            f isinstance(item, int):
+                print("{d:}".format(item), end='')
+                t = += 1
+        except ValueError:
             pass
-        t += 1
         print()
-        return i
+        return t
+    except TypeError:
+        raise Exception("my_list must be iterable")
+    except Exception as e:
+        raise Exception("An error ocurred: {}".format(e))
