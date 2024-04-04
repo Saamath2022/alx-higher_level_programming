@@ -8,5 +8,5 @@ def safe_print_division(a, b):
         print("An error occured:", e)
         result = None
     finally:
-        print("inside result: {}".format(result))
+        iprint("Inside result: {:1f}".format(result))
         return result
