@@ -1,12 +1,17 @@
-#!/usr/python3
+#!/usr/bin/python3
+
 def safe_print_list_integers(my_list=[], x=0):
-    try
     t_print = 0
-    for i in range(x):
-        try:
-            print("{}".format(my_list[i]), end='')
-            t_print += 1
-        except ValueError:
+    try:
+        for i in range(x):
+            try:
+                print("{}".format(my_list[i]), end="")
+                t_print += 1
+        except TypeError:
             pass
-    print("")
-    return (t_print)
+        except IndexError:
+            raise IndexError("Index out of range")
+        print()
+        return t_print
+    except Exception as e:
+        raise Exception("An error occured:{}".format(e))
