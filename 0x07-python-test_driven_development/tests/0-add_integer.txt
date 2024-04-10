@@ -1,0 +1,50 @@
+The "1-add_integer" module
+=============================
+Test cases for add_integer function
+
+Using "add_integer"
+======================
+
+import function from module:
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Test one int argument:
+	>>> add_integer(2)
+	100
+
+Test one float:
+	>>> add_integer(5.5, 10.5)
+	15
+
+Test one negative float:
+	>>> add_integer(10, -5)
+	5
+
+Test two integers:
+	>>> add_integer(0, 0)
+	0
+
+Test one integer and one float:
+	>>> add_integer(10, 3.5)
+	13
+
+Test a float and an integer:
+	>>> add_integer(2.5, 3)
+	5
+
+Test two big integers:
+	>>> add_integer(999999998, 999999999)
+	1999999997
+
+Test case with non-integer or float argument:
+	>>> add_integer('a', 5)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or float
+
+Test case with non-integer or float argument:
+	>>> add_integer(10, 'b')
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer or float

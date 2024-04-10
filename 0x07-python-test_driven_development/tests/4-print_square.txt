@@ -1,0 +1,56 @@
+documentation = """
+Print Square
+============
+
+This module contains a function for printing a square with the character '#'.
+
+Function:
+---------
+
+print_square(size)
+
+Description:
+------------
+
+The `print_square` function prints a square with the character '#' of the specified size.
+
+Parameters:
+-----------
+
+- size (int): The size length of the square.
+
+Returns:
+--------
+
+None
+
+Raises:
+-------
+
+- TypeError: If the size is not an integer.
+- ValueError: If the size is less than 0.
+
+Example Usage:
+--------------
+
+```python
+>>> print_square(5)
+#####
+#   #
+#   #
+#   #
+#####
+
+>>> print_square(3)
+###
+# #
+###
+
+>>> print_square(0)
+#
+
+>>> print_square(-2)
+Traceback (most recent call last):
+  ...
+ValueError: size must be >= 0
+

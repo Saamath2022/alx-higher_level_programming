@@ -1,0 +1,51 @@
+documentation = """
+Matrix Division
+===============
+
+This module contains a function for dividing matrices.
+
+Function:
+---------
+
+matrix_divided(matrix, div)
+
+Description:
+------------
+
+The `matrix_divided` function divides all elements of a matrix by a given divisor.
+
+Parameters:
+-----------
+
+- matrix (list of lists): The matrix to be divided.
+- div (int or float): The divisor by which the elements of the matrix will be divided.
+
+Returns:
+--------
+
+A new matrix where each element is the result of dividing the corresponding element of the input matrix by the divisor.
+
+Raises:
+-------
+
+- TypeError: If the matrix is not a list of lists, or if the divisor is not an integer or a float.
+- ValueError: If all rows of the matrix do not have the same size.
+- ZeroDivisionError: If the divisor is zero.
+
+Example Usage:
+--------------
+
+```python
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 2)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+Traceback (most recent call last):
+  ...
+ZeroDivisionError: division by zero
+
+>>> matrix_divided([[1, 2, 3], [4, 5]], 2)
+Traceback (most recent call last):
+  ...
+ValueError: All rows of the matrix must have the same size
+

@@ -1,0 +1,48 @@
+documentation = """
+Lazy Matrix Multiplication
+==========================
+
+This module contains a function for lazy matrix multiplication.
+
+Function:
+---------
+
+lazy_matrix_mul(m_a, m_b)
+
+Description:
+------------
+
+The `lazy_matrix_mul` function performs lazy matrix multiplication using NumPy.
+
+Parameters:
+-----------
+
+- m_a (numpy.ndarray): The first matrix.
+- m_b (numpy.ndarray): The second matrix.
+
+Returns:
+--------
+
+A new matrix representing the multiplication of m_a by m_b.
+
+Raises:
+-------
+
+- ValueError: If the number of columns in m_a is not equal to the number of rows in m_b, indicating that the matrices cannot be multiplied.
+
+Example Usage:
+--------------
+
+```python
+>>> import numpy as np
+>>> m_a = np.array([[1, 2], [3, 4]])
+>>> m_b = np.array([[5, 6], [7, 8]])
+>>> lazy_matrix_mul(m_a, m_b)
+array([[19, 22],
+       [43, 50]])
+
+>>> m_a = np.array([[1, 2, 3], [4, 5, 6]])
+>>> m_b = np.array([[7, 8], [9, 10], [11, 12]])
+>>> lazy_matrix_mul(m_a, m_b)
+array([[ 58,  64],
+       [139, 154]])

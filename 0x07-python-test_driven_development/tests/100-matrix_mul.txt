@@ -1,0 +1,48 @@
+documentation = """
+Matrix Multiplication
+=====================
+
+This module contains a function for matrix multiplication.
+
+Function:
+---------
+
+matrix_mul(m_a, m_b)
+
+Description:
+------------
+
+The `matrix_mul` function multiplies two matrices.
+
+Parameters:
+-----------
+
+- m_a (list of lists): The first matrix.
+- m_b (list of lists): The second matrix.
+
+Returns:
+--------
+
+A new matrix representing the multiplication of m_a by m_b.
+
+Raises:
+-------
+
+- TypeError: If either m_a or m_b is not a list of lists, or if the elements of the matrices are not integers or floats.
+- ValueError: If the number of columns in m_a is not equal to the number of rows in m_b, indicating that the matrices cannot be multiplied.
+
+Example Usage:
+--------------
+
+```python
+>>> matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+[[19, 22], [43, 50]]
+
+>>> matrix_mul([[1, 2, 3], [4, 5, 6]], [[7, 8], [9, 10], [11, 12]])
+[[58, 64], [139, 154]]
+
+>>> matrix_mul([[1, 2], [3, 4]], [[5, 6, 7], [8, 9, 10]])
+Traceback (most recent call last):
+  ...
+ValueError: matrices are not aligned for multiplication
+
