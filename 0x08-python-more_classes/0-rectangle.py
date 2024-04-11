@@ -1,11 +1,9 @@
 #!/urs/bin/python3
+""" Defines a Rectangle class."""
+
+
 class Rectangle:
     """
     An empty class representing a rectangle.
     """
-
     pass
-
-
-if __name__ == "__main__":
-    rect = Rectangle()
