@@ -1,10 +1,4 @@
 #!/usr/bin/python3
 def magic_string():
-    """
-    Returns a string "BestSchool" concatenated n times,
-    where n is the number of the iteration.
-    """
-    return "BestSchool" * magic_string.counter
-
-
-magic_string.counter = 1
+    magic_string.count = getattr(magic_string, 'count', 0) + 1
+    return ", ".join(["BestSchool" for i in range(magic_string.count)])
