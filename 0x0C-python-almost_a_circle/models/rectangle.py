@@ -54,12 +54,14 @@ class Rectangle(Base):
         """Setter for the y attribute."""
         self.__y = value
 
-    def validate_integer(self, name, value, eq=True):
-    """Method for validating the value"""
-    if not isinstance(value, int):
-        raise TypeError("{} must be an integer".format(name))
-    if eq and value < 0:
-        raise ValueError("{} must be >= 0".format(name))
-    elif not eq and value <= 0:
-        raise ValueError("{} must be > 0".format(name))
 
+if __name__ == "__main__":
+
+    r1 = Rectangle(10, 2)
+    print(r1.id)
+
+    r2 = Rectangle(2, 10)
+    print(r2.id)
+
+    r3 = Rectangle(10, 2, 0, 0, 12)
+    print(r3.id)
