@@ -1,0 +1,12 @@
+#!/urs/bin/python3
+class MyList(list):
+    """A custom list class that inherits from list."""
+
+    def print_sorted(self, filename=None):
+        sorted_list = sorted(self)  # Sort the list in ascending order
+        print(sorted_list)
+        if filename:
+            with open(filename, 'w') as file:
+                for item in sorted_list:
+                    file.write(str(item) + '\n')
+            print(f'Sorted list has been written to {filename}')
