@@ -1,7 +1,7 @@
 #!/urs/bin/python3
 
 import cmd
-from models.rectangle import Rectangle
+ifrom models.rectangle import Rectangle
 
 class RectangleCmd(cmd.Cmd):
     prompt = 'Rectangle > '

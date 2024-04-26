@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+
 """Module for models base functions"""
-import json
 
 from models.base import Base
 
@@ -44,12 +44,19 @@ class Rectangle(Base):
     def y(self, value):
         self.__y = value
 
+
 if __name__ == "__main__":
+    # Load data from JSON file
     with open("rectangle_data.json") as f:
         data = json.load(f)
         obj = Rectangle(**data)
-        print("Width:", obj.width)
-        print("Height:", obj.height)
-        print("X:", obj.x)
-        print("Y:", obj.y)
-        print("ID:", obj.id)
+        
+    # Create Rectangle objects with different parameters and print their IDs
+    r1 = Rectangle(10, 2)
+    print(r1.id)
+
+    r2 = Rectangle(2, 10)
+    print(r2.id)
+
+    r3 = Rectangle(10, 2, 0, 0, 12)
+    print(r3.id)
