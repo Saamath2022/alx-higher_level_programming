@@ -3,14 +3,12 @@
 """ Modules for base.py """
 from .base import Base
 
-import json
+class Base:
+    __nb_objects = 0
 
-{
-  "id": 1
-}
-
-if __name__ == "__main__":
-    with open("base_data.json") as f:
-        data = json.load(f)
-        obj = Base(**data)
-        print(obj.id)
+    def __init__(self, id=None):
+        if id is not None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
