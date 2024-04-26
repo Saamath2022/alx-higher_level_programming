@@ -1,6 +1,6 @@
-#!/usr/bin/python3
-
-"""Module for models base functions"""
+# Open a file in write mode (creates the file if it doesn't exist)
+with open("tests/rectangle.py", "w") as f:
+    f.write("""
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
@@ -56,3 +56,4 @@ class Rectangle(Base):
         elif value < 0:
             raise ValueError("y must be >= 0")
         self._y = value
+""")

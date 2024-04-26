@@ -5,6 +5,10 @@ from .base import Base
 
 import json
 
+{
+  "id": 1
+}
+
 if __name__ == "__main__":
     with open("base_data.json") as f:
         data = json.load(f)
