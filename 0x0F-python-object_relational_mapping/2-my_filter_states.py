@@ -4,36 +4,22 @@ where `name` matches the argument
 from the database `hbtn_0e_0_usa`.
 """
 
-import MySQLdb
-import sys
+import MySQLdb as db
+from sys import argv
 
-if __name__ == "__main__":
-    mysql_username = sys.argv[1]
-    mysql_password = sys.argv[2]
-    db_name = sys.argv[3]
-    state_name = sys.argv[4]
+if __name__ == '__main__':
+    """
+    Access to the database and get the states
+    from the database.
+    """
+    db_connect = db.connect(host="localhost", port=3306,
+                            user=argv[1], passwd=argv[2], db=argv[3])
+    db_cursor = db_connect.cursor()
 
-    try:
-        conn = MySQLdb.connect(
-                host="localhost",
-                port=3306,
-                user=mysql_username,
-                passwd=mysql_password,
-                db=db_name,
-                charset="utf8"
-                )
+    db_cursor.execute(
+        "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY \
+                        states.id ASC".format(argv[4]))
+    rows_selected = db_cursor.fetchall()
 
-    except MySQLdb.Error as e:
-        print("Error connecting to database: {}".format(e))
-        sys.exit(1)
-
-    cur = conn.cursor()
-    query = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY states.id ASC".format(state_name)
-    cur.execute(query)
-    rows = cur.fetchall()
-
-    for row in rows:
+    for row in rows_selected:
         print(row)
-
-    cur.close()
-    conn.close()
